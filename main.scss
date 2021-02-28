@@ -1,4 +1,69 @@
 $color-text: #292929;
-$color-hover: #545454;
-$color-chosen: #B2B2B2;
+$color-menu-font: #353535;
+$color-hover: #B2B2B2;
 
+
+
+@mixin menu-font {
+    font: {
+        family: 'Quicksand', sans-serif;
+        size: 1.8rem;
+        weight: 400;
+        color: $color-menu-font;
+    }
+}
+
+@mixin main-text {
+    font: {
+        family: 'Open Sans', sans-serif;
+        size: 1.6rem;
+        weight: 400;
+    }
+}
+
+
+
+
+
+:root {
+    font-size: 10px;
+}
+
+a {
+text-decoration: none;
+cursor:pointer;
+color: $color-menu-font;
+}
+
+a:hover {
+    background: $color-hover
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+/*    **********  HEADER  *************  */
+
+
+
+.page-navigation__link {
+    @include menu-font;
+}
+
+
+/* ********  MAIN    ********** */
+
+.pojects__image{
+    width: 300px;
+}

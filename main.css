@@ -1,1 +1,35 @@
-null
+:root {
+  font-size: 10px;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #353535;
+}
+
+a:hover {
+  background: #B2B2B2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*    **********  HEADER  *************  */
+.page-navigation__link {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  font-color: #353535;
+}
+
+/* ********  MAIN    ********** */
+.pojects__image {
+  width: 300px;
+}
