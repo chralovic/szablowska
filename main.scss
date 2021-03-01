@@ -16,7 +16,7 @@ $color-hover: #B2B2B2;
 @mixin main-text {
     font: {
         family: 'Open Sans', sans-serif;
-        size: 1.6rem;
+        size: 1.2rem;
         weight: 400;
     }
 }
@@ -29,16 +29,6 @@ $color-hover: #B2B2B2;
     font-size: 10px;
 }
 
-a {
-text-decoration: none;
-cursor:pointer;
-color: $color-menu-font;
-}
-
-a:hover {
-    background: $color-hover
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -49,12 +39,34 @@ a:hover {
 }
 
 
+body {
+    margin: 0;
+    padding: 0;
+}
 
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
+a {
+    text-decoration: none;
+    cursor:pointer;
+    color: $color-menu-font;
+    }
 
+    a:hover {
+        background: $color-hover
 
+    }
 /*    **********  HEADER  *************  */
 
+.page-header {
+    position: fixed;
+    top: 50px;
+    left: 50px;
+}
 
 
 .page-navigation__link {
@@ -64,6 +76,43 @@ a:hover {
 
 /* ********  MAIN    ********** */
 
+.page-content {
+    margin-left: 220px;
+    padding: 0 10%;
+}
+
+.projects {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 .pojects__image{
     width: 300px;
 }
+
+
+
+
+
+
+/*    **********  FOOTER  *************  */
+
+.page-footer {
+    position: fixed;
+    bottom: 50px;
+    left: 50px;
+}
+
+
+.footer__copyright {
+    color: $color-text;
+    font-size: 1rem;
+    @include main-text;
+
+    &__link {
+        text-decoration: underline;
+    }
+}
+
+

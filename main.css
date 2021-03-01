@@ -2,6 +2,26 @@
   font-size: 10px;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 a {
   text-decoration: none;
   cursor: pointer;
@@ -12,16 +32,13 @@ a:hover {
   background: #B2B2B2;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
+/*    **********  HEADER  *************  */
+.page-header {
+  position: fixed;
+  top: 50px;
+  left: 50px;
 }
 
-/*    **********  HEADER  *************  */
 .page-navigation__link {
   font-family: 'Quicksand', sans-serif;
   font-size: 1.8rem;
@@ -30,6 +47,36 @@ a:hover {
 }
 
 /* ********  MAIN    ********** */
+.page-content {
+  margin-left: 220px;
+  padding: 0 10%;
+}
+
+.projects {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .pojects__image {
   width: 300px;
+}
+
+/*    **********  FOOTER  *************  */
+.page-footer {
+  position: fixed;
+  bottom: 50px;
+  left: 50px;
+}
+
+.footer__copyright {
+  color: #292929;
+  font-size: 1rem;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.footer__copyright__link {
+  text-decoration: underline;
 }
