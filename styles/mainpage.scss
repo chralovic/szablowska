@@ -1,0 +1,21 @@
+@use '/styles/mixins.scss';
+
+.pojects {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+
+    &__item {
+        margin: 4rem;
+    }
+
+    &__title {
+        @include main-text;
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    &__image {
+        width: 30rem;
+    }
+}

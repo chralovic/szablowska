@@ -1,27 +1,6 @@
-$color-text: #292929;
-$color-menu-font: #353535;
-$color-hover: #B2B2B2;
+@use '/styles/mixins.scss';
 
-
-
-@mixin menu-font {
-    font: {
-        family: 'Quicksand', sans-serif;
-        size: 1.8rem;
-        weight: 400;
-        color: $color-menu-font;
-    }
-}
-
-@mixin main-text {
-    font: {
-        family: 'Open Sans', sans-serif;
-        size: 1.2rem;
-        weight: 400;
-    }
-}
-
-
+/*    **********  COMMON  *************  */
 
 :root {
     font-size: 10px;
@@ -89,36 +68,15 @@ font-weight: 400;
 
 /* ********  MAIN    ********** */
 
+
 .content-section {
-  min-height: 100vh;
-}
+    min-height: 100vh;
+  }
 
-.page-content {
-    margin-left: 20rem;
-    padding: 3rem 10%;
-}
-
-.pojects {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-
-    &__item {
-        margin: 4rem;
-    }
-
-    &__title {
-        @include main-text;
-        font-size: 1.6rem;
-        text-align: center;
-    }
-
-    &__image {
-        width: 30rem;
-    }
-}
-
-
+  .page-content {
+      margin-left: 20rem;
+      padding: 3rem 10%;
+  }
 
 
 /*    **********  FOOTER  *************  */
