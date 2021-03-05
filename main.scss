@@ -58,9 +58,15 @@ a {
     }
 /*    **********  HEADER  *************  */
 
+h1{
+    @include menu-font;
+font-size: 3.2rem;
+font-weight: 400;
+}
+
 .page-header {
     position: fixed;
-    top: 5rem;
+    top: 4rem;
     left: 5rem;
 }
 
@@ -68,37 +74,50 @@ a {
     @include menu-font;
 }
 
-.page-navigation__items {
-    padding-top: 15px;
+.page-navigation {
+
+&__items {
+    padding-top: 1.5rem;
+}
+
+&__item {
+    padding: 0.3rem;
+}
+
+
 }
 
 /* ********  MAIN    ********** */
 
 .content-section {
   min-height: 100vh;
-   
 }
-
 
 .page-content {
     margin-left: 20rem;
-    padding: 0 10%;
+    padding: 3rem 10%;
 }
 
 .pojects {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
+
+    &__item {
+        margin: 4rem;
+    }
+
+    &__title {
+        @include main-text;
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    &__image {
+        width: 30rem;
+    }
 }
 
-.pojects__item {
-    margin: 4rem;
-}
-
-
-.pojects__image {
-    width: 30rem;
-}
 
 
 
@@ -113,7 +132,7 @@ a {
 .footer__copyright {
     color: $color-text;
     @include main-text;
-    font-size: 0.9rem;
+    font-size: 1rem;
 
     &__link {
         text-decoration: underline;

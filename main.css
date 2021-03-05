@@ -31,9 +31,18 @@ a:hover {
 }
 
 /*    **********  HEADER  *************  */
+h1 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  font-color: #353535;
+  font-size: 3.2rem;
+  font-weight: 400;
+}
+
 .page-header {
   position: fixed;
-  top: 5rem;
+  top: 4rem;
   left: 5rem;
 }
 
@@ -45,7 +54,11 @@ a:hover {
 }
 
 .page-navigation__items {
-  padding-top: 15px;
+  padding-top: 1.5rem;
+}
+
+.page-navigation__item {
+  padding: 0.3rem;
 }
 
 /* ********  MAIN    ********** */
@@ -55,7 +68,7 @@ a:hover {
 
 .page-content {
   margin-left: 20rem;
-  padding: 0 10%;
+  padding: 3rem 10%;
 }
 
 .pojects {
@@ -66,6 +79,14 @@ a:hover {
 
 .pojects__item {
   margin: 4rem;
+}
+
+.pojects__title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-size: 1.6rem;
+  text-align: center;
 }
 
 .pojects__image {
@@ -84,7 +105,7 @@ a:hover {
   font-family: 'Open Sans', sans-serif;
   font-size: 1.2rem;
   font-weight: 400;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .footer__copyright__link {
