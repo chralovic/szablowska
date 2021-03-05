@@ -23,15 +23,11 @@ $color-hover: #B2B2B2;
 
 
 
-
-
 :root {
     font-size: 10px;
 }
 
 * {
-    margin: 0;
-    padding: 0;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -o-box-sizing: border-box;
@@ -64,35 +60,45 @@ a {
 
 .page-header {
     position: fixed;
-    top: 50px;
-    left: 50px;
+    top: 5rem;
+    left: 5rem;
 }
-
 
 .page-navigation__link {
     @include menu-font;
 }
 
+.page-navigation__items {
+    padding-top: 15px;
+}
 
 /* ********  MAIN    ********** */
 
+.content-section {
+  min-height: 100vh;
+   
+}
+
+
 .page-content {
-    margin-left: 220px;
+    margin-left: 20rem;
     padding: 0 10%;
 }
 
-.projects {
+.pojects {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-flow: row wrap;
+    align-items: center;
 }
 
-.pojects__image{
-    width: 300px;
+.pojects__item {
+    margin: 4rem;
 }
 
 
-
+.pojects__image {
+    width: 30rem;
+}
 
 
 
@@ -100,15 +106,14 @@ a {
 
 .page-footer {
     position: fixed;
-    bottom: 50px;
-    left: 50px;
+    bottom: 5rem;
+    left: 5rem;
 }
-
 
 .footer__copyright {
     color: $color-text;
-    font-size: 1rem;
     @include main-text;
+    font-size: 0.9rem;
 
     &__link {
         text-decoration: underline;
