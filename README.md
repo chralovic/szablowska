@@ -1,2 +1,1 @@
-# szablowska
-A website for photographer Julia Szabłowska
+# A website template for photographers.
