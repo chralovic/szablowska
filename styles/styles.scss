@@ -1,4 +1,34 @@
-@use 'styles/mixins';
+$color-text: #292929;
+$color-menu-font: #353535;
+$color-hover: #B2B2B2;
+
+@mixin menu-font {
+    font: {
+        family: 'Quicksand', sans-serif;
+        size: 1.9rem;
+        weight: 300;
+        color: $color-menu-font;
+    }
+}
+
+@mixin main-text {
+    font: {
+        family: 'PT Sans', sans-serif;
+        size: 1.6rem;
+        weight: 400;
+    }
+}
+
+
+@mixin titles {
+    font: {
+        family: 'Quicksand', sans-serif;
+        size: 1.7rem;
+        weight: 300;
+        color: $color-menu-font;
+    }
+}
+
 
 /*    **********  COMMON  *************  */
 
@@ -98,3 +128,53 @@ font-weight: 400;
 }
 
 
+/*********  MAIN PAGE - PROJECTS SECTION   ***********/
+
+
+
+.pojects {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+
+    &__item {
+        margin: 4rem;
+    }
+
+    &__title {
+        @include titles;
+        text-align: center;
+    }
+
+    &__image {
+        width: 30rem;
+    }
+}
+
+
+
+
+/******* CV *******/
+
+
+.bio{
+
+    margin-top: 4rem;
+
+&__block {
+    margin: 5rem;
+}
+
+&__subtitle {
+
+ @include menu-font;
+
+
+}
+
+&__text{
+    @include main-text;
+    margin: 1rem;
+    
+}
+}
