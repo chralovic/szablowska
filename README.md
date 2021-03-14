@@ -1,1 +1,1 @@
-# A website template for photographers.
+# A website for Julia Szabłowska.
