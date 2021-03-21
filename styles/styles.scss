@@ -166,15 +166,15 @@ font-weight: 400;
 }
 
 &__subtitle {
-
  @include menu-font;
+}
 
-
+&__img{
+    width: 40rem;
 }
 
 &__text{
     @include main-text;
-    margin: 1rem;
-    
+    margin-top: 1rem;
 }
 }
