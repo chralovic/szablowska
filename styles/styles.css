@@ -99,19 +99,19 @@ h1 {
 }
 
 .pojects__item {
-  margin: 4rem;
+  margin: 2rem;
 }
 
 .pojects__title {
   font-family: 'Quicksand', sans-serif;
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   font-weight: 300;
   font-color: #353535;
   text-align: center;
 }
 
 .pojects__image {
-  width: 30rem;
+  width: 23rem;
 }
 
 /******* CV *******/
@@ -134,5 +134,9 @@ h1 {
   font-family: 'PT Sans', sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
-  margin: 1rem;
+  margin-top: 1.2rem;
+}
+
+.bio__img {
+  width: 400px;
 }

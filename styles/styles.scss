@@ -23,7 +23,7 @@ $color-hover: #B2B2B2;
 @mixin titles {
     font: {
         family: 'Quicksand', sans-serif;
-        size: 1.7rem;
+        size: 1.6rem;
         weight: 300;
         color: $color-menu-font;
     }
@@ -138,7 +138,7 @@ font-weight: 400;
     align-items: center;
 
     &__item {
-        margin: 4rem;
+        margin: 2rem;
     }
 
     &__title {
@@ -147,7 +147,7 @@ font-weight: 400;
     }
 
     &__image {
-        width: 30rem;
+        width: 23rem;
     }
 }
 
@@ -166,15 +166,15 @@ font-weight: 400;
 }
 
 &__subtitle {
-
  @include menu-font;
-
-
 }
 
 &__text{
     @include main-text;
-    margin: 1rem;
-    
+    margin-top: 1.2rem;
+}
+
+&__img {
+    width: 400px;
 }
 }
