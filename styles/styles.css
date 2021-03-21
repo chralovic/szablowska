@@ -84,7 +84,7 @@ h1 {
   font-family: 'PT Sans', sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 .footer__copyright__link {
@@ -115,12 +115,8 @@ h1 {
 }
 
 /******* CV *******/
-.bio {
-  margin-top: 4rem;
-}
-
 .bio__block {
-  margin: 5rem;
+  margin: 2.5rem;
 }
 
 .bio__subtitle {
@@ -132,6 +128,7 @@ h1 {
 
 .bio__img {
   width: 40rem;
+  margin-bottom: 3rem;
 }
 
 .bio__text {
