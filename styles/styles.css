@@ -140,3 +140,23 @@ h1 {
 .bio__img {
   width: 400px;
 }
+
+/******* GALLERY *******/
+.content-section__description {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.content-section__gallery-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  column-gap: 2rem;
+  row-gap: 2rem;
+}
+
+.content-section__gallery-item {
+  width: 100%;
+  height: auto;
+  place-self: center;
+}

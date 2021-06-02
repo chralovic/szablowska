@@ -156,7 +156,6 @@ font-weight: 400;
 
 /******* CV *******/
 
-
 .bio{
 
     margin-top: 4rem;
@@ -177,4 +176,30 @@ font-weight: 400;
 &__img {
     width: 400px;
 }
+}
+
+
+
+/******* GALLERY *******/
+
+.content-section {
+
+    &__description {
+        @include main-text;
+    }
+
+&__gallery-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 2rem;
+    row-gap: 2rem;
+
+}
+
+
+    &__gallery-item{
+        width: 100%;
+        height: auto;
+        place-self: center;
+    }
 }
