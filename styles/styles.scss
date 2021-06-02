@@ -198,13 +198,16 @@ font-weight: 400;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     column-gap: 2rem;
     row-gap: 2rem;
-
 }
 
 
-    &__gallery-item{
+    &__gallery-item {
         width: 100%;
         height: auto;
         place-self: center;
     }
+    &__gallery-item:hover {
+        cursor: zoom-in;
+    }
+
 }

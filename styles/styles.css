@@ -162,3 +162,7 @@ h1 {
   height: auto;
   place-self: center;
 }
+
+.content-section__gallery-item:hover {
+  cursor: zoom-in;
+}
