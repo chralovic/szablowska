@@ -135,8 +135,8 @@ h1 {
   font-family: 'PT Sans', sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
-<<<<<<< HEAD
   margin-top: 1.2rem;
+  margin-top: 1rem;
 }
 
 .bio__img {
@@ -161,7 +161,4 @@ h1 {
   width: 100%;
   height: auto;
   place-self: center;
-=======
-  margin-top: 1rem;
->>>>>>> b213c8274e659888c7189ce009f6899a6e6151dc
 }

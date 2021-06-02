@@ -164,23 +164,18 @@ font-weight: 400;
 
 &__subtitle {
  @include menu-font;
-<<<<<<< HEAD
-=======
 }
 
 &__img{
     width: 40rem;
     margin-bottom: 3rem;
->>>>>>> b213c8274e659888c7189ce009f6899a6e6151dc
 }
 
 &__text{
     @include main-text;
-<<<<<<< HEAD
     margin-top: 1.2rem;
-=======
     margin-top: 1rem;
->>>>>>> b213c8274e659888c7189ce009f6899a6e6151dc
+
 }
 
 &__img {
