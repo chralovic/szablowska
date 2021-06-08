@@ -219,7 +219,7 @@ font-weight: 400;
 
 .modal {
   position: fixed;
-  width: 70rem;
+  width: 60rem;
   max-width: 100%;
   z-index: 10;
   left: 50%;
@@ -270,12 +270,12 @@ font-weight: 400;
     z-index: 10;
   }
 
-  .right {
+  .left {
     left: 5rem;
     top: 30rem;
   }
 
-  .left {
+  .right {
     right: 5rem;
     top: 30rem;
   }
