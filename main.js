@@ -14,6 +14,7 @@ function leftPressed() {
   galleryImgArr[counter].classList.add("modal");
   if (counter == 0) {
     leftBtn.classList.add("invisible");
+    document.removeEventListener('keydown', arrowKeysHandler)
   };
 }
 
@@ -29,6 +30,18 @@ function rightPressed() {
   }
 }
 
+/*
+function arrowKeysHandler(e) {
+  switch (e.keyCode) {
+    case 37:
+      leftPressed();
+        break;
+    case 39:
+      rightPressed();
+        break;
+}
+} 
+*/
 
 let counter = 0;
 
@@ -40,6 +53,7 @@ galleryImgArr.forEach( e=> {
     counter = Array.prototype.indexOf.call(galleryImgArr, e);
     if (counter !== 0) {
       leftBtn.classList.remove("invisible");
+      
     };
     closeBtn.classList.remove("invisible");
     modalOverlayLayer.classList.add("modal-overlay");
@@ -58,18 +72,9 @@ closeBtn.addEventListener('click', ()=> {
 
 rightBtn.addEventListener('click', rightPressed)
 leftBtn.addEventListener('click', leftPressed)
-document.addEventListener('keydown', function(e) {
-  switch (e.keyCode) {
-      case 37:
-        leftPressed();
-          break;
-      case 39:
-        rightPressed();
-          break;
-  }
-})
-
-
 
 /*
-arrow left = 37 right 39*/
+document.addEventListener('keydown', arrowKeysHandler)
+*/
+
+
