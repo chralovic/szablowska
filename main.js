@@ -5,6 +5,9 @@ const closeBtn = document.querySelector('#close-btn');
 const modalOverlayLayer = document.querySelector('#modal-overlay');
 const leftBtn =  document.querySelector('#btn-left');
 const rightBtn =  document.querySelector('#btn-right');
+const paginationLeft = document.querySelector('#pagination__left');
+const paginationRight = document.querySelector('#pagination__right');
+const pagesArr = ['http://127.0.0.1:5500/pages/project01.html', '/a', '/b', '/c'];
 
 
 
@@ -30,18 +33,7 @@ function rightPressed() {
   }
 }
 
-/*
-function arrowKeysHandler(e) {
-  switch (e.keyCode) {
-    case 37:
-      leftPressed();
-        break;
-    case 39:
-      rightPressed();
-        break;
-}
-} 
-*/
+
 
 let counter = 0;
 
@@ -53,7 +45,6 @@ galleryImgArr.forEach( e=> {
     counter = Array.prototype.indexOf.call(galleryImgArr, e);
     if (counter !== 0) {
       leftBtn.classList.remove("invisible");
-      
     };
     closeBtn.classList.remove("invisible");
     modalOverlayLayer.classList.add("modal-overlay");
@@ -73,7 +64,50 @@ closeBtn.addEventListener('click', ()=> {
 rightBtn.addEventListener('click', rightPressed)
 leftBtn.addEventListener('click', leftPressed)
 
+
+let currentPageUrl = window.location.href;
+let currentPageIndex = pagesArr.findIndex(currentPageUrl);
+let previousPage = pagesArr[currentPageIndex-1];
+let nextPage = pagesArr[currentPageIndex+1];
+
+paginationRight.setAttribute('onclick', `location.href='${pagesArr.previousPage}'`);
+paginationLeft.setAttribute('onclick', `location.href='${pagesArr.previousPage}'`);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
+function arrowKeysHandler(e) {
+  switch (e.keyCode) {
+    case 37:
+      leftPressed();
+        break;
+    case 39:
+      rightPressed();
+        break;
+}
+}
+
 document.addEventListener('keydown', arrowKeysHandler)
 */
 
