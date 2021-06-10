@@ -11,6 +11,10 @@ let counter = 0;
 galleryImgArr.forEach( e=> {
   e.addEventListener('click', ()=> {
     e.classList.add("modal");
+    counter = Array.prototype.indexOf.call(galleryImgArr, e);
+    if (counter !== 0) {
+      leftBtn.classList.remove("invisible");
+    };
     closeBtn.classList.remove("invisible");
     modalOverlayLayer.classList.add("modal-overlay");
     rightBtn.classList.remove("invisible");
@@ -27,7 +31,7 @@ rightBtn.addEventListener('click', ()=> {
     leftBtn.classList.remove("invisible");
   };
   if (counter == galleryImgArr.length-1) {
-    rightBtn.classList.add("invisible");
+     rightBtn.classList.add("invisible");
   }
 })
 
