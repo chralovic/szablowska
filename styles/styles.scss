@@ -193,6 +193,7 @@ font-weight: 400;
         @include main-text;
     }
 
+    
 &__gallery-box {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -202,6 +203,9 @@ font-weight: 400;
     grid-column: 2 / span 3;
     grid-row: 3 / span 1;
 }
+
+
+
 
 
     &__gallery-item {

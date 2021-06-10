@@ -6,7 +6,33 @@ const modalOverlayLayer = document.querySelector('#modal-overlay');
 const leftBtn =  document.querySelector('#btn-left');
 const rightBtn =  document.querySelector('#btn-right');
 
+
+
+function leftPressed() {
+  galleryImgArr[counter].classList.remove("modal");
+  counter--;
+  galleryImgArr[counter].classList.add("modal");
+  if (counter == 0) {
+    leftBtn.classList.add("invisible");
+  };
+}
+
+function rightPressed() {
+  galleryImgArr[counter].classList.remove("modal");
+  counter++;
+  galleryImgArr[counter].classList.add("modal");
+  if (counter !== 0) {
+    leftBtn.classList.remove("invisible");
+  };
+  if (counter == galleryImgArr.length-1) {
+     rightBtn.classList.add("invisible");
+  }
+}
+
+
 let counter = 0;
+
+
 
 galleryImgArr.forEach( e=> {
   e.addEventListener('click', ()=> {
@@ -21,32 +47,6 @@ galleryImgArr.forEach( e=> {
 })})
 
 
-
-
-rightBtn.addEventListener('click', ()=> {
-  galleryImgArr[counter].classList.remove("modal");
-  counter++;
-  galleryImgArr[counter].classList.add("modal");
-  if (counter !== 0) {
-    leftBtn.classList.remove("invisible");
-  };
-  if (counter == galleryImgArr.length-1) {
-     rightBtn.classList.add("invisible");
-  }
-})
-
-
-leftBtn.addEventListener('click', ()=> {
-  galleryImgArr[counter].classList.remove("modal");
-  counter--;
-  galleryImgArr[counter].classList.add("modal");
-  if (counter == 0) {
-    leftBtn.classList.add("invisible");
-  };
-
-})
-
-
 closeBtn.addEventListener('click', ()=> {
   galleryImgArr[counter].classList.remove("modal");
     closeBtn.classList.add("invisible");
@@ -56,4 +56,20 @@ closeBtn.addEventListener('click', ()=> {
     counter = 0;
 })
 
+rightBtn.addEventListener('click', rightPressed)
+leftBtn.addEventListener('click', leftPressed)
+document.addEventListener('keydown', function(e) {
+  switch (e.keyCode) {
+      case 37:
+        leftPressed();
+          break;
+      case 39:
+        rightPressed();
+          break;
+  }
+})
 
+
+
+/*
+arrow left = 37 right 39*/
