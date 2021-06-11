@@ -191,6 +191,9 @@ font-weight: 400;
 
     &__description {
         @include main-text;
+    &__more {
+        display: none
+    }
     }
 
     
@@ -234,7 +237,7 @@ font-weight: 400;
 
 .modal {
   position: fixed;
-  width: 60rem;
+  width: 40rem;
   max-width: 100%;
   z-index: 10;
   left: 50%;
@@ -252,9 +255,6 @@ font-weight: 400;
 }
 
 .close-btn {
-    background-color: white;
-    border: none; 
-    color: gray; 
     font-size: 4rem; 
     cursor: pointer; 
     position: fixed;
@@ -276,9 +276,6 @@ font-weight: 400;
 
 
   .modal-pagination-btn {
-    background-color: white;
-    border: none; 
-    color: gray; 
     font-size: 5rem; 
     cursor: pointer; 
     position: fixed;
@@ -293,4 +290,27 @@ font-weight: 400;
   .right {
     right: 5rem;
     top: 30rem;
+  }
+
+
+  .description__more-btn {
+      margin: 1rem 1rem 5rem 1rem;
+  }
+
+
+  .clearbtn {
+    background-color: white;
+    border: none; 
+    color: gray; 
+  }
+
+  .description__more-btn {
+    color: black; 
+    padding: 1rem 3rem;
+    border: 1px solid gray;
+  }
+
+  .description__more-btn:hover {
+    background-color: rgb(240, 240, 240);
+    cursor: pointer;
   }

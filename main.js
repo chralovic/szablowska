@@ -7,6 +7,9 @@ const leftBtn =  document.querySelector('#btn-left');
 const rightBtn =  document.querySelector('#btn-right');
 const paginationLeft = document.querySelector('#pagination__left');
 const paginationRight = document.querySelector('#pagination__right');
+const dots = document.getElementById("dots");
+const moreText = document.getElementById("more");
+const moreBtn = document.getElementById("moreBtn");
 const pagesArr = [ 'https://shablowska.com/a', 'https://shablowska.com/b', 'https://shablowska.com/c', 'http://127.0.0.1:5500/pages/project01.html'];
 
 
@@ -33,6 +36,17 @@ function rightPressed() {
   }
 }
 
+function readMore() {
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    moreBtn.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    moreBtn.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
 
 
 let counter = 0;
@@ -89,9 +103,7 @@ pageChecker();
 paginationRight.setAttribute('onclick', nextPage );
 paginationLeft.setAttribute('onclick', previousPage);
 
-
-
-
+moreBtn.addEventListener('click', readMore);
 
 
 
