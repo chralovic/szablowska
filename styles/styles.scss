@@ -13,9 +13,9 @@ $color-hover: #B2B2B2;
 
 @mixin main-text {
     font: {
-        family: 'PT Sans', sans-serif;
+        family: 'Open Sans', sans-serif;
         size: 1.6rem;
-        weight: 400;
+        weight: 300;
     }
 }
 
@@ -27,6 +27,12 @@ $color-hover: #B2B2B2;
         weight: 300;
         color: $color-menu-font;
     }
+}
+
+@mixin clearbtn {
+    background-color: white;
+    border: none; 
+    color: gray; 
 }
 
 
@@ -255,6 +261,7 @@ font-weight: 400;
 }
 
 .close-btn {
+    @include clearbtn;
     font-size: 4rem; 
     cursor: pointer; 
     position: fixed;
@@ -276,6 +283,7 @@ font-weight: 400;
 
 
   .modal-pagination-btn {
+    @include clearbtn;
     font-size: 5rem; 
     cursor: pointer; 
     position: fixed;
@@ -298,16 +306,12 @@ font-weight: 400;
   }
 
 
-  .clearbtn {
-    background-color: white;
-    border: none; 
-    color: gray; 
-  }
-
   .description__more-btn {
+      @include clearbtn;
     color: black; 
     padding: 1rem 3rem;
     border: 1px solid gray;
+    border-radius: 5px;
   }
 
   .description__more-btn:hover {

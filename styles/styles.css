@@ -81,9 +81,9 @@ h1 {
 
 .footer__copyright {
   color: #292929;
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 1.1rem;
 }
 
@@ -132,9 +132,9 @@ h1 {
 }
 
 .bio__text {
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: 300;
   margin-top: 1.2rem;
   margin-top: 1rem;
 }
@@ -145,9 +145,9 @@ h1 {
 
 /******* GALLERY *******/
 .content-section__description {
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .content-section__description__more {
@@ -175,9 +175,9 @@ h1 {
 }
 
 .pagination__elem {
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 3rem;
   width: 3rem;
   height: 5rem;
@@ -207,6 +207,9 @@ h1 {
 }
 
 .close-btn {
+  background-color: white;
+  border: none;
+  color: gray;
   font-size: 4rem;
   cursor: pointer;
   position: fixed;
@@ -226,6 +229,9 @@ h1 {
 }
 
 .modal-pagination-btn {
+  background-color: white;
+  border: none;
+  color: gray;
   font-size: 5rem;
   cursor: pointer;
   position: fixed;
@@ -246,16 +252,14 @@ h1 {
   margin: 1rem 1rem 5rem 1rem;
 }
 
-.clearbtn {
+.description__more-btn {
   background-color: white;
   border: none;
   color: gray;
-}
-
-.description__more-btn {
   color: black;
   padding: 1rem 3rem;
   border: 1px solid gray;
+  border-radius: 5px;
 }
 
 .description__more-btn:hover {
