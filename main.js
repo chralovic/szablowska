@@ -7,7 +7,7 @@ const leftBtn =  document.querySelector('#btn-left');
 const rightBtn =  document.querySelector('#btn-right');
 const paginationLeft = document.querySelector('#pagination__left');
 const paginationRight = document.querySelector('#pagination__right');
-const pagesArr = ['http://127.0.0.1:5500/pages/project01.html', '/a', '/b', '/c'];
+const pagesArr = [ 'https://shablowska.com/a', 'https://shablowska.com/b', 'https://shablowska.com/c', 'http://127.0.0.1:5500/pages/project01.html'];
 
 
 
@@ -65,13 +65,31 @@ rightBtn.addEventListener('click', rightPressed)
 leftBtn.addEventListener('click', leftPressed)
 
 
-let currentPageUrl = window.location.href;
-let currentPageIndex = pagesArr.findIndex(currentPageUrl);
-let previousPage = pagesArr[currentPageIndex-1];
-let nextPage = pagesArr[currentPageIndex+1];
 
-paginationRight.setAttribute('onclick', `location.href='${pagesArr.previousPage}'`);
-paginationLeft.setAttribute('onclick', `location.href='${pagesArr.previousPage}'`);
+let currentPageIndex = pagesArr.indexOf(window.location.href);
+let previousPage = "location.href='" + pagesArr[currentPageIndex-1] + "'";
+let nextPage = "location.href='" + pagesArr[currentPageIndex+1] + "'";
+
+
+function pageChecker() {
+  let theLastPage = pagesArr[pagesArr.length];
+  let theFirstPage = pagesArr[0];
+
+  if (currentPageIndex == 0) {
+    previousPage = "location.href='" + theLastPage + "'";
+  };
+
+  if (currentPageIndex == theLastPage) {
+    nextPage == "location.href='" + theFirstPage + "'";
+  }
+}
+
+pageChecker();
+
+paginationRight.setAttribute('onclick', nextPage );
+paginationLeft.setAttribute('onclick', previousPage);
+
+
 
 
 
