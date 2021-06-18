@@ -13,28 +13,73 @@ const moreBtn = document.getElementById("moreBtn");
 const pagesArr = [ 'https://shablowska.com/a', 'https://shablowska.com/b', 'https://shablowska.com/c', 'http://127.0.0.1:5500/pages/project01.html'];
 
 
+/********************* NAVIGATION *********************/
 
 function leftPressed() {
   galleryImgArr[counter].classList.remove("modal");
-  counter--;
-  galleryImgArr[counter].classList.add("modal");
   if (counter == 0) {
-    leftBtn.classList.add("invisible");
-    document.removeEventListener('keydown', arrowKeysHandler)
-  };
+    counter = galleryImgArr.length-1
+      } else   counter--;
+  galleryImgArr[counter].classList.add("modal");
+
 }
 
 function rightPressed() {
   galleryImgArr[counter].classList.remove("modal");
-  counter++;
+  if (counter == 9) {
+counter = 0;
+  } else counter++;
   galleryImgArr[counter].classList.add("modal");
-  if (counter !== 0) {
-    leftBtn.classList.remove("invisible");
-  };
-  if (counter == galleryImgArr.length-1) {
-     rightBtn.classList.add("invisible");
-  }
 }
+
+function closePressed() {
+  galleryImgArr[counter].classList.remove("modal");
+  closeBtn.classList.add("invisible");
+  modalOverlayLayer.classList.remove("modal-overlay")
+  rightBtn.classList.add("invisible");
+  leftBtn.classList.add("invisible");
+  counter = 0;
+}
+
+
+function arrowKeysHandler(e) {
+  switch (e.keyCode) {
+    case 37:
+      leftPressed();
+        break;
+    case 39:
+      rightPressed();
+        break;
+        case 27:
+          closePressed();
+          break;
+}
+}
+
+
+let counter = 0;
+
+
+galleryImgArr.forEach( e=> {
+  e.addEventListener('click', ()=> {
+    e.classList.add("modal");
+    counter = Array.prototype.indexOf.call(galleryImgArr, e);
+    closeBtn.classList.remove("invisible");
+    modalOverlayLayer.classList.add("modal-overlay");
+    rightBtn.classList.remove("invisible");
+    leftBtn.classList.remove("invisible");
+})})
+
+
+closeBtn.addEventListener('click', closePressed)
+rightBtn.addEventListener('click', rightPressed)
+leftBtn.addEventListener('click', leftPressed)
+document.addEventListener('keydown', arrowKeysHandler)
+
+
+
+
+/********************* READ MORE *********************/
 
 function readMore() {
   if (dots.style.display === "none") {
@@ -49,36 +94,12 @@ function readMore() {
 }
 
 
-let counter = 0;
+moreBtn.addEventListener('click', readMore);
 
 
 
-galleryImgArr.forEach( e=> {
-  e.addEventListener('click', ()=> {
-    e.classList.add("modal");
-    counter = Array.prototype.indexOf.call(galleryImgArr, e);
-    if (counter !== 0) {
-      leftBtn.classList.remove("invisible");
-    };
-    closeBtn.classList.remove("invisible");
-    modalOverlayLayer.classList.add("modal-overlay");
-    rightBtn.classList.remove("invisible");
-})})
 
-
-closeBtn.addEventListener('click', ()=> {
-  galleryImgArr[counter].classList.remove("modal");
-    closeBtn.classList.add("invisible");
-    modalOverlayLayer.classList.remove("modal-overlay")
-    rightBtn.classList.add("invisible");
-    leftBtn.classList.add("invisible");
-    counter = 0;
-})
-
-rightBtn.addEventListener('click', rightPressed)
-leftBtn.addEventListener('click', leftPressed)
-
-
+/******************** PAGINATION ********************/
 
 let currentPageIndex = pagesArr.indexOf(window.location.href);
 let previousPage = "location.href='" + pagesArr[currentPageIndex-1] + "'";
@@ -102,43 +123,3 @@ pageChecker();
 
 paginationRight.setAttribute('onclick', nextPage );
 paginationLeft.setAttribute('onclick', previousPage);
-
-moreBtn.addEventListener('click', readMore);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-function arrowKeysHandler(e) {
-  switch (e.keyCode) {
-    case 37:
-      leftPressed();
-        break;
-    case 39:
-      rightPressed();
-        break;
-}
-}
-
-document.addEventListener('keydown', arrowKeysHandler)
-*/
-
-
