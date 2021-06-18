@@ -39,6 +39,7 @@ function closePressed() {
   rightBtn.classList.add("invisible");
   leftBtn.classList.add("invisible");
   counter = 0;
+  document.removeEventListener('keydown', arrowKeysHandler)
 }
 
 
@@ -62,6 +63,7 @@ let counter = 0;
 
 galleryImgArr.forEach( e=> {
   e.addEventListener('click', ()=> {
+    document.addEventListener('keydown', arrowKeysHandler);
     e.classList.add("modal");
     counter = Array.prototype.indexOf.call(galleryImgArr, e);
     closeBtn.classList.remove("invisible");
@@ -74,8 +76,6 @@ galleryImgArr.forEach( e=> {
 closeBtn.addEventListener('click', closePressed)
 rightBtn.addEventListener('click', rightPressed)
 leftBtn.addEventListener('click', leftPressed)
-document.addEventListener('keydown', arrowKeysHandler)
-
 
 
 
@@ -92,7 +92,6 @@ function readMore() {
     moreText.style.display = "inline";
   }
 }
-
 
 moreBtn.addEventListener('click', readMore);
 
