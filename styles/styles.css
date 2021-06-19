@@ -267,4 +267,53 @@ h1 {
   cursor: pointer;
 }
 
+/**********   HAMBURGER    ************/
+#hamburger {
+  opacity: 0;
+}
+
+@media screen and (max-width: 380px) {
+  #hamburger {
+    opacity: 1;
+  }
+  .page-navigation {
+    display: none;
+  }
+  .page-navigation-visible {
+    display: block;
+  }
+  .hamburger-menu {
+    position: absolute;
+    right: 3rem;
+    top: 4rem;
+  }
+  .hamburger-menu__item {
+    display: block;
+    width: 4rem;
+    height: 0.5rem;
+    background-color: #353535;
+    border-radius: 0.5rem;
+    transition: 300ms;
+  }
+  .hamburger-menu__item-1 {
+    transform: translateY(-4px);
+  }
+  .hamburger-menu__item-3 {
+    transform: translateY(4px);
+  }
+  .hamburger-menu__animation {
+    display: block;
+  }
+  .hamburger-menu__animation .hamburger-menu__item-1 {
+    transform: translateY(4px) rotateZ(-40deg);
+  }
+  .hamburger-menu__animation .hamburger-menu__item-3 {
+    transform: translateY(-6px) rotateZ(40deg);
+  }
+  .hamburger-menu__animation .hamburger-menu__item-2 {
+    opacity: 0;
+  }
+}
+
 /******* MOBILE VIEW ********/
+/*https://css-tricks.com/a-complete-guide-to-css-media-queries/*/

@@ -10,6 +10,7 @@ const paginationRight = document.querySelector('#pagination__right');
 const dots = document.getElementById("dots");
 const moreText = document.getElementById("more");
 const moreBtn = document.getElementById("moreBtn");
+const menuButton = document.querySelector('#hamburger');
 const pagesArr = [ 'https://shablowska.com/a', 'https://shablowska.com/b', 'https://shablowska.com/c', 'http://127.0.0.1:5500/pages/project01.html'];
 
 
@@ -122,3 +123,17 @@ pageChecker();
 
 paginationRight.setAttribute('onclick', nextPage );
 paginationLeft.setAttribute('onclick', previousPage);
+
+
+
+/********  Hamburger *******/
+
+function addHamburger() {
+  const pageNavigation = document.querySelector('.page-navigation');
+  pageNavigation.classList.toggle('page-navigation-visible');
+  const menuAnimation = document.querySelector('.hamburger-menu');
+  menuAnimation.classList.toggle('hamburger-menu__animation');
+}
+
+
+menuButton.addEventListener('click', addHamburger);

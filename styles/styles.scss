@@ -321,5 +321,72 @@ font-weight: 400;
 
 
 
+  /**********   HAMBURGER    ************/
 
+  #hamburger {
+    opacity: 0;
+}
+
+
+@media screen and (max-width: 380px) {
+
+	#hamburger {
+		opacity: 1;
+	}
+
+
+    .page-navigation {
+        display: none;
+    }
+
+
+    .page-navigation-visible {
+        display: block;
+    }
+
+
+    .hamburger-menu {
+		position: absolute;
+		right: 3rem;
+		top: 4rem;
+
+        &__item {
+            display: block;
+            width: 4rem;
+            height: 0.5rem;
+            background-color: $color-menu-font;
+            border-radius: 0.5rem;
+            transition: 300ms;
+            }
+
+            &__item-1 {
+            transform: translateY(-4px);
+            }
+
+           &__item-3 {
+            transform: translateY(4px);
+            }
+
+            &__animation {
+                display: block;
+                }
+
+            &__animation .hamburger-menu__item-1 {
+                transform: translateY(4px) rotateZ(-40deg);
+            }
+
+            &__animation .hamburger-menu__item-3 {
+                transform: translateY(-6px) rotateZ(40deg);
+            }
+
+            &__animation .hamburger-menu__item-2 {
+                opacity: 0;
+             }
+	}
+
+}
 /******* MOBILE VIEW ********/
+
+
+
+/*https://css-tricks.com/a-complete-guide-to-css-media-queries/*/
