@@ -124,3 +124,5 @@ pageChecker();
 paginationRight.setAttribute('onclick', nextPage );
 paginationLeft.setAttribute('onclick', previousPage);
 
+
+/******************** CAPTIONS ********************/

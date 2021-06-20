@@ -156,7 +156,7 @@ h1 {
 
 .content-section__gallery-box {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(5, 1fr);
   grid-gap: 2rem;
   align-content: center;
   justify-content: center;
@@ -272,7 +272,7 @@ h1 {
   opacity: 0;
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 400px) {
   #hamburger {
     opacity: 1;
   }
@@ -284,13 +284,13 @@ h1 {
   }
   .hamburger-menu {
     position: absolute;
-    right: 3rem;
-    top: 4rem;
+    right: -8rem;
+    top: 3.5rem;
   }
   .hamburger-menu__item {
     display: block;
     width: 4rem;
-    height: 0.5rem;
+    height: 0.4rem;
     background-color: #353535;
     border-radius: 0.5rem;
     transition: 300ms;
@@ -316,4 +316,35 @@ h1 {
 }
 
 /******* MOBILE VIEW ********/
-/*https://css-tricks.com/a-complete-guide-to-css-media-queries/*/
+@media screen and (max-width: 400px) {
+  .page-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    min-height: 100vh;
+    margin-left: 0;
+    padding: 3rem;
+  }
+  .page-footer {
+    display: none;
+  }
+  .content-section__pagination {
+    display: none;
+  }
+  .content-section__gallery-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .content-section__description {
+    padding-top: 15rem;
+  }
+  .page-header {
+    position: fixed;
+    top: 3rem;
+    left: 3rem;
+    background-color: blue;
+  }
+}

@@ -31,10 +31,9 @@ $color-hover: #B2B2B2;
 
 @mixin clearbtn {
     background-color: white;
-    border: none; 
-    color: gray; 
+    border: none;
+    color: gray;
 }
-
 
 /*    **********  COMMON  *************  */
 
@@ -98,22 +97,18 @@ font-weight: 400;
 &__item {
     padding: 0.3rem;
 }
-
-
 }
 
 /* ********  MAIN    ********** */
-
 
 .content-section {
     min-height: 100vh;
   }
 
   .page-content {
-      margin-left: 20rem;
-      padding: 3rem 10%;
-  }
-
+    margin-left: 20rem;
+    padding: 3rem 10%;
+}
 
 /*    **********  FOOTER  *************  */
 
@@ -133,10 +128,7 @@ font-weight: 400;
     }
 }
 
-
 /*********  MAIN PAGE - PROJECTS SECTION   ***********/
-
-
 
 .pojects {
     display: flex;
@@ -156,9 +148,6 @@ font-weight: 400;
         width: 23rem;
     }
 }
-
-
-
 
 /******* CV *******/
 
@@ -189,9 +178,8 @@ font-weight: 400;
 }
 }
 
-
-
 /******* GALLERY *******/
+
 
 .content-section {
 
@@ -202,18 +190,15 @@ font-weight: 400;
     }
     }
 
-    
 &__gallery-box {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(5, 1fr);
     grid-gap: 2rem;
     align-content: center;
     justify-content: center;
     grid-column: 2 / span 3;
     grid-row: 3 / span 1;
 }
-
-
 
     &__gallery-item {
         width: 100%;
@@ -237,8 +222,7 @@ font-weight: 400;
     padding: 0;
     background: none;
     cursor: pointer;
-}
-
+    }
 }
 
 .modal {
@@ -262,13 +246,12 @@ font-weight: 400;
 
 .close-btn {
     @include clearbtn;
-    font-size: 4rem; 
-    cursor: pointer; 
+    font-size: 4rem;
+    cursor: pointer;
     position: fixed;
     right: 3rem;
     top: 3rem;
     z-index: 10;
-
 }
 
 .modal-overlay {
@@ -284,8 +267,8 @@ font-weight: 400;
 
   .modal-pagination-btn {
     @include clearbtn;
-    font-size: 5rem; 
-    cursor: pointer; 
+    font-size: 5rem;
+    cursor: pointer;
     position: fixed;
     z-index: 10;
   }
@@ -319,40 +302,34 @@ font-weight: 400;
     cursor: pointer;
   }
 
-
-
   /**********   HAMBURGER    ************/
 
   #hamburger {
     opacity: 0;
 }
 
-
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 400px) {
 	#hamburger {
 		opacity: 1;
 	}
-
 
     .page-navigation {
         display: none;
     }
 
-
     .page-navigation-visible {
         display: block;
     }
 
-
     .hamburger-menu {
 		position: absolute;
-		right: 3rem;
-		top: 4rem;
+		right: -8rem;
+		top: 3.5rem;
 
         &__item {
             display: block;
             width: 4rem;
-            height: 0.5rem;
+            height: 0.4rem;
             background-color: $color-menu-font;
             border-radius: 0.5rem;
             transition: 300ms;
@@ -386,6 +363,46 @@ font-weight: 400;
 }
 /******* MOBILE VIEW ********/
 
+@media screen and (max-width: 400px) {
 
+    .page-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        min-height: 100vh;
+        margin-left: 0;
+        padding: 3rem;
 
-/*https://css-tricks.com/a-complete-guide-to-css-media-queries/*/
+    }
+
+    .page-footer {
+        display: none;
+    }
+
+    .content-section {
+        &__pagination {
+            display: none;
+        }
+
+        &__gallery-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+
+        }
+
+        &__description {
+            padding-top: 15rem;
+        }
+    }
+
+    .page-header {
+        position: fixed;
+        top: 3rem;
+        left: 3rem;
+        background-color: blue;
+    }
+
+}
