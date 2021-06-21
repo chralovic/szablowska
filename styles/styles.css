@@ -127,7 +127,7 @@ h1 {
 }
 
 .bio__img {
-  width: 40rem;
+  width: 30vw;
   margin-bottom: 3rem;
 }
 
@@ -272,7 +272,7 @@ h1 {
   opacity: 0;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 499px) {
   #hamburger {
     opacity: 1;
   }
@@ -316,7 +316,7 @@ h1 {
 }
 
 /******* MOBILE VIEW ********/
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 499px) {
   .page-content {
     display: flex;
     flex-direction: column;
@@ -339,12 +339,40 @@ h1 {
     align-items: flex-end;
   }
   .content-section__description {
-    padding-top: 15rem;
+    padding-top: 12rem;
   }
   .page-header {
-    position: fixed;
+    position: absolute;
     top: 3rem;
     left: 3rem;
-    background-color: blue;
+  }
+  .page-navigation {
+    background-color: white;
+    padding-bottom: 5rem;
+  }
+  .all-projects-section {
+    padding-top: 13rem;
+  }
+  .bio {
+    margin-top: 30%;
+  }
+  .bio__img {
+    width: 30rem;
+    margin-bottom: 0rem;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 768px) {
+  .content-section__pagination {
+    display: none;
+  }
+  .content-section__gallery-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .content-section__description {
+    padding-top: 5rem;
   }
 }
