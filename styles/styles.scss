@@ -1,6 +1,6 @@
 $color-text: #292929;
 $color-menu-font: #353535;
-$color-hover: #B2B2B2;
+$color-hover: #dfdfdf;
 
 @mixin menu-font {
     font: {
@@ -60,15 +60,20 @@ ul {
     padding: 0;
 }
 
+
+a:hover {
+    background: $color-hover
+    }
+
+img:hover {
+    filter: brightness(1.2);
+    }
+
+
 a {
     text-decoration: none;
     cursor:pointer;
     color: $color-menu-font;
-    }
-
-    a:hover {
-        background: $color-hover
-
     }
 /*    **********  HEADER  *************  */
 
@@ -98,6 +103,9 @@ font-weight: 400;
     padding: 0.3rem;
 }
 }
+
+
+
 
 /* ********  MAIN    ********** */
 

@@ -21,14 +21,18 @@ ul {
   padding: 0;
 }
 
+a:hover {
+  background: #dfdfdf;
+}
+
+img:hover {
+  filter: brightness(1.2);
+}
+
 a {
   text-decoration: none;
   cursor: pointer;
   color: #353535;
-}
-
-a:hover {
-  background: #B2B2B2;
 }
 
 /*    **********  HEADER  *************  */
